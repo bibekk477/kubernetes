@@ -4,11 +4,11 @@ This repository contains multiple demo applications and their Kubernetes manifes
 
 # Key Features
 
-Multiple Demo Applications: Variety of Node.js/Express applications
-Database Integration: MongoDB configuration and deployment examples
-Persistent Storage: ConfigMaps and Persistent Volume demonstrations
-Kubernetes Manifests: Ready-to-use YAML configuration files
-Containerization: Dockerized applications for easy deployment
+- [x] **Multiple Demo Applications:** Variety of Node.js/Express applications
+- [x] **Database Integration:** MongoDB configuration and deployment examples
+- [x] **Persistent Storage:** ConfigMaps and Persistent Volume demonstrations
+- [x] **Kubernetes Manifests:** Ready-to-use YAML configuration files
+- [x] **Containerization:** Dockerized applications for easy deployment
 
 # Prerequisites
 
