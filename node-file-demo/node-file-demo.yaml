@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-file-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-file-app
+  template:
+    metadata:
+      labels:
+        app: node-file-app
+    spec:
+      containers:
+        - name: node-file-app
+          image: bibekk477/node-file-demo:v0
+          ports:
+            - containerPort: 3000
+          volumeMounts: #volumeMounts tells Kubernetes:“Attach this volume to this container at this path”
+            - name: my-vol
+              mountPath: /app/emails.txt #app is the working directory inside the container defined in Dockerfile and this is file inside container
+
+      volumes:
+        - name: my-vol
+          hostPath:
+            path: /mydata/emails.txt #node file on the host machine(kubernetes node)
+            type: FileOrCreate
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-node-file-app
+spec:
+  selector:
+    app: node-file-app
+  ports:
+    - name: http
+      port: 8082 # external port
+      targetPort: 3000 # container port
+  type: LoadBalancer
