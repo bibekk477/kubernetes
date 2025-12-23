@@ -14,10 +14,10 @@ This repository contains multiple demo applications and their Kubernetes manifes
 
 Before deploying these applications, ensure you have:
 
-A running Kubernetes cluster (Minikube)
-kubectl command-line tool installed and configured
-Docker installed (for building custom images)
-Basic understanding of Kubernetes concepts (Pods, Services, Deployments)
+- **A running Kubernetes cluster:** Minikube
+- **kubectl installed and configured:** Command-line tool for interacting with Kubernetes
+- **Docker installed:** For building custom images
+- **Basic understanding of Kubernetes concepts:** Pods, Services, Deployments
 
 # Getting Started
 
