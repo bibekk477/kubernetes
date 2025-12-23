@@ -27,10 +27,12 @@ Before deploying these applications, ensure you have:
 
 2. Deploy
 
+```bash
 - Go to the particular folder
   cd <project-folder>
 
 - Deploy Kubernetes Resources (Deployment & Service)
+
   kubectl apply -f <deployment-file>.yaml
   kubectl apply -f <service-file>.yaml
 
@@ -39,16 +41,18 @@ Before deploying these applications, ensure you have:
   kubectl apply -f mongo-service.yaml
 
 - Check if pods are running:
+
   kubectl get pods
 
   Check services:
   kubectl get svc
 
 3. Check Deployment Status:
+
    kubectl get deployments
    kubectl get pods
 
-   View logs if something goes wrong:
+   # View logs if something goes wrong:
    kubectl logs <pod-name>
 
    For continuous logs:
@@ -57,9 +61,11 @@ Before deploying these applications, ensure you have:
 4. Exposing the Service (Minikube)
 
 - Expose Using Minikube (Recommended for Local Testing)
+
   minikube service <service-name>
 
 - Get Service URL Manually
+
   minikube service <service-name> --url
 
 5. Cleanup (Optional)
@@ -72,3 +78,4 @@ Before deploying these applications, ensure you have:
 - delete everything:
 
   kubectl delete all --all
+```
